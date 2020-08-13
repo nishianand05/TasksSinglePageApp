@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+
+body{
+	background: #141E30;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+	font-family: 'Baloo Tamma 2', cursive;
+}
+
+#apiBtn a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+a {
+	margin: 20px;
+    padding: 10px;
+	text-decoration: none;
+	color: #bdc3c7;
+	background: rgba(0,0,0,0.5);
+	border-radius: 15px;
+	box-shadow: inset 0 0 2px black;
+}
+
+a:hover {
+	box-shadow: inset 0 0 4px black;
+	transform: scale(1.06);
+}
+
+@media(max-width: 600px){
+	a {
+		font-size: 10px;
+	}
+}
+
+header {
+	text-align: center;
+}
+
+header h1 {
+	font-size: 60px;
+	font-weight: 300;
+	margin: 50px 0 0 0;
+	color: white;
+}
+
+header h2 {
+	font-size: 20px;
+	margin: 5px 0;
+	font-weight: 300;
+	color: #bdc3c7;
+}
+
+.form {
+	/* width: 800px; */
+	width: 64%;
+	margin: 30px auto 20px;
+}
+
+#todoInput {
+	width: 100%;
+	height: 20px;
+	background: none;
+	border: none;
+	border-bottom: 0.5px solid white;
+	outline: none;
+	font-weight: 300;
+	font-size: 110%;
+	padding: 20px;
+	color: white;
+	padding-left: 40px;
+}
+
+#icon-container {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#inputIcon {
+ position: absolute;
+ padding: 10px; 
+}
+
+.list {
+	width: 64%;
+	margin: 0 auto;
+	list-style: none;
+	padding: 0;
+}
+
+.task {
+    box-sizing: border-box;
+	width: 100%;
+	height: 50px;
+	line-height: 60px;
+	font-size: 18px;
+	padding: 0 20px;
+	transition: all .3s linear;
+	color: white;
+}
+
+.task:hover{
+	cursor: pointer;
+}
+
+.task:hover .deleteTodo{
+	opacity: 1;
+}
+
+li .todoDate {
+	font-size: 12px;
+	font-weight: 300;
+	/* color: #bdc3c7; */
+	color: rgba(189,195,199,0.5);
+	word-spacing: 2;
+	margin-left: 10px;
+}
+
+
+li:nth-of-type(2n) { 
+ background: rgba(0,0,0,0.1);
+}
+
+li:hover{
+	box-shadow: 0px 0px 3px black;
+	transform: scale(1.02);
+}
+
+
+li .deleteTodo {
+	float: right;
+	color: #c0392b;
+	transition: all 0.3s;
+	opacity: 0;
+}
+
+li .deleteTodo i {
+	margin-top: 15px;
+}
+
+li .deleteTodo:hover {
+	color: #e74c3c;
+}
+
+
+.done {
+	text-decoration: line-through;
+	color: rgba(189,195,199,0.5);
+}
