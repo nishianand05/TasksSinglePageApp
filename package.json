@@ -4,7 +4,9 @@
   "description": "To do List API",
   "main": "index.js",
   "scripts": {
+	  "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+	  
   },
   "author": "Nishi Anand",
   "license": "ISC",
