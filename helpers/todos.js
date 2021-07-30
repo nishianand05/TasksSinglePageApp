@@ -1,5 +1,7 @@
 var db = require("../models")
 
+
+// Get all todos
 exports.getTodos = function(req, res){
 	db.Todo.find()
 	.then(function(todos){
@@ -10,6 +12,7 @@ exports.getTodos = function(req, res){
 	})
 }
 
+// Create new todo
 exports.createTodo = function(req, res){
 	db.Todo.create(req.body)
 	.then(function(newTodo){
@@ -20,6 +23,7 @@ exports.createTodo = function(req, res){
 	})
 }
 
+// Get particular todo using ID
 exports.getTodo = function(req, res){
 	db.Todo.findById(req.params.todoId)
 	.then(function(foundTodo){
@@ -30,6 +34,7 @@ exports.getTodo = function(req, res){
 	})
 }
 
+// Update todo based on ID
 exports.updateTodo = function(req, res){
 	db.Todo.findOneAndUpdate({_id: req.params.todoId}, req.body, {new: true})
 	.then(function(updatedTodo){
@@ -40,6 +45,7 @@ exports.updateTodo = function(req, res){
 	})
 }
 
+// Delete a todo
 exports.deleteTodo = function(req, res){
 	db.Todo.deleteOne({_id: req.params.todoId})
 	.then(function(deletedTodo){
